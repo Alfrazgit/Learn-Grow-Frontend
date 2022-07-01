@@ -1,126 +1,133 @@
-import React from 'react'
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import StudentService from "../services/StudentService";
+import { useNavigate } from "react-router-dom";
 
-export default function Addstudent() {
-    return (
-        <div className='add'>
-            <div className='addstudent'><h4>Add Student Data</h4></div>
-            <div className='studentdetails'>
-            <form action="" method="POST" enctype="multipart/form-data">
+const AddStudent = () => {
+  const [student, setStudent] = useState({
+    student_id: "",
+    name: "",
+    parent_id: "",
+    dob: "",
+    student_class: "",
+    section: "",
+    roll: "",
+  });
 
-                <table class="tbl-30">
-                    <tr>
-                        <td>
-                            Full Name:
-                        </td>
-                        <td><input type="text" name="full_name" placeholder="Enter your name" /></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Username:
-                        </td>
-                        <td><input type="text" name="username" placeholder="Enter username" /></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Password:
-                        </td>
-                        <td><input type="password" name="password" placeholder="Enter your password" /></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Roll No:
-                        </td>
-                        <td>
-                            <input type="text" name="title" placeholder="Roll No." />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Year:</td>
-                        <td>
-                            <input type="number" name="year" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Gender:
-                        </td>
-                        <td>
-                            <input type="radio" name="gender" value="male" />Male
-                            <input type="radio" name="gender" value="female" />Female
-                        </td>
+  const navigate = useNavigate();
 
-                    </tr>
+  const handleChange = (e) => {
+    const value = e.target.value;
+    setStudent({ ...student, [e.target.name]: value });
+  };
 
-                    <tr>
-                        <td>
-                            Parent name:
-                        </td>
-                        <td><input type="text" name="parent" placeholder="Enter Parent name" /></td>
-                    </tr>
-                    <tr>
-                        <td>Select Image:</td>
-                        <td>
-                            <input type="file" name="image" />
-                        </td>
+  const saveStudent = (e) => {
+    e.preventDefault();
 
-                    </tr>
-                    <tr>
-                        <td>Class:</td>
-                        <td>
-                            <select name="class">
+    StudentService.addStudent(student)
+      .then((res) => {
+        console.log(res);
+        navigate("/studentall");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
-                                <option value="kg-1">K.G.-1</option>
-                                <option value="kg-2">K.G.-2</option>
-
-
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                                <option value="11-sci">11-Science</option>
-                                <option value="11-arts">11-Arts</option>
-                                <option value="11-commerce">11-Commerce</option>
-                                <option value="12-sci">12-Science</option>
-                                <option value="12-arts">12-Arts</option>
-                                <option value="12-commerce">12-Commerce</option>
-
-
-
-
-                                <option value="0">No Class Found</option>
-
-
-                            </select>
-                        </td>
-
-                    </tr>
-                    <tr>
-                        <td>Description:</td>
-                        <td>
-                            <textarea name="description" cols="23" rows="4" placeholder="Description"></textarea>
-                        </td>
-                    </tr>
-
-                    
-
-                    <div className='addadminbtn'>
-                            <tr>
-                                <td colspan="2">
-                                <button type="button" class="btn btn-primary btn-block mb-4">&nbsp;Add&nbsp;</button>
-
-                                    {/* <input className="addbtnadmin" type="submit" name="submit" value="Add Admin" class="btn-secondary" /> */}
-                                </td>
-                            </tr>
-                        </div>
-                </table>
-            </form>
+  return (
+    <div className=" d-flex justify-content-center py-5">
+      <div className="card col-md-6 px-5 bg-light text-dark">
+        <h3 className="text-center mt-5">Add Student Data</h3>
+        <div className="card-body">
+          <form>
+            <div className="form-group my-3">
+              <label>Id: </label>
+              <input
+                placeholder="Id"
+                name="student_id"
+                className="form-control"
+                value={student.student_ID}
+                onChange={(e) => handleChange(e)}
+                type="text"
+              />
             </div>
+            <div className="form-group my-3">
+              <label>Name: </label>
+              <input
+                placeholder="Name"
+                name="name"
+                className="form-control"
+                value={student.name}
+                onChange={(e) => handleChange(e)}
+                type="text"
+              />
+            </div>
+            <div className="form-group my-3">
+              <label>Class: </label>
+              <input
+                placeholder="Class"
+                name="student_class"
+                className="form-control"
+                value={student.class}
+                onChange={(e) => handleChange(e)}
+                type="text"
+              />
+            </div>
+            <div className="form-group my-3">
+              <label>Section: </label>
+              <input
+                placeholder="Section"
+                name="section"
+                className="form-control"
+                value={student.section}
+                onChange={(e) => handleChange(e)}
+                type="text"
+              />
+            </div>
+            <div className="form-group my-3">
+              <label>Roll: </label>
+              <input
+                placeholder="Roll"
+                name="roll"
+                className="form-control"
+                value={student.roll}
+                onChange={(e) => handleChange(e)}
+                type="text"
+              />
+            </div>
+            <div className="form-group my-3">
+              <label>Parents: </label>
+              <input
+                placeholder="Parents Id"
+                name="parent_id"
+                className="form-control"
+                value={student.parent_ID}
+                onChange={(e) => handleChange(e)}
+                type="text"
+              />
+            </div>
+            <div className="form-group my-3">
+              <label>DOB </label>
+              <input
+                placeholder="Date of Birth"
+                name="dob"
+                className="form-control"
+                value={student.dob}
+                onChange={(e) => handleChange(e)}
+                type="date"
+              />
+            </div>
+            <button className="btn btn-success my-3" onClick={saveStudent}>
+              Save
+            </button>
+            <Link to="/studentall">
+              <button className="btn btn-danger my-3 mx-2">Cancel</button>
+            </Link>{" "}
+          </form>
         </div>
-    )
-}
+      </div>
+    </div>
+  );
+};
+
+export default AddStudent;
