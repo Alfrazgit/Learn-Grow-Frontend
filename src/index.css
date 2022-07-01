@@ -1,0 +1,895 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+
+.footer {
+  background-color: #004269;
+  width: 100%;
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 50px;
+  padding-left: 90px;
+}
+
+.footer .footer-left,
+.footer .footer-center,
+.footer .footer-right {
+  display: inline-block;
+  vertical-align: top;
+}
+
+
+/* footer left*/
+
+.footer .footer-left {
+  width: 33%;
+  padding-right: 15px;
+}
+
+.footer .about {
+  line-height: 20px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer .about span {
+  display: block;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer .icons {
+  margin-top: 25px;
+}
+
+.footer .icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color: #33383b;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+
+/* footer center*/
+
+.footer .footer-center {
+  width: 30%;
+}
+
+.footer .footer-center i {
+  background-color: #33383b;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer .footer-center i.fa-envelope {
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer .footer-center p {
+  display: inline-block;
+  color: #ffffff;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.footer .footer-center p span {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.footer .footer-center p a {
+  color: #0099ff;
+  text-decoration: none;
+}
+
+
+/* footer right*/
+
+.footer .footer-right {
+  width: 35%;
+}
+
+.footer h2 {
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer h2 span {
+  color: #0099ff;
+}
+
+.footer .menu {
+  color: #ffffff;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+
+.footer .menu a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer .menu a:hover {
+  color: #0099ff;
+}
+
+.footer .name {
+  color: #0099ff;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .footer {
+    font-size: 14px;
+  }
+
+  .footer .footer-left,
+  .footer .footer-center,
+  .footer .footer-right {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .footer .footer-center i {
+    margin-left: 0;
+  }
+}
+
+.navbar a {
+
+  padding: 8px;
+  text-decoration: none;
+   color: rgb(189, 184, 184); 
+}
+.add{
+  text-align: center;
+  max-width: 500px;
+  height: 2200px;
+  transform: translate(80%, 12%);
+  background-color: lightgoldenrodyellow;
+  margin-bottom: 450px;
+  padding: 20px;
+  background-color: #BDEDFF;
+  box-shadow: 5px 10px 18px #888888;
+  margin-top: 10px;
+}
+
+.signinform {
+  text-align: center;
+  max-width: 500px;
+  height: 600px;
+  transform: translate(80%, 12%);
+  background-color: lightgoldenrodyellow;
+  margin-bottom: 150px;
+  padding: 20px;
+  background-color: #BDEDFF;
+  box-shadow: 5px 10px 18px #888888;
+
+}
+
+.signtable {
+  text-align: center;
+  margin-left: 10%;
+}
+
+.form-container {
+  text-align: center;
+  max-width: 500px;
+  transform: translate(85%, 5%);
+
+}
+
+.container {
+
+  max-width: 1000px;
+  padding: 20px;
+  transform: translate(34%, 5%);
+
+}
+
+.signupform {
+  text-align: center;
+  margin: 0 auto;
+  height: 1400px;
+  padding: 60px;
+  background-color: lightgoldenrodyellow;
+  margin-bottom: 200px;
+  background-color: #BDEDFF;
+  box-shadow: 5px 10px 18px #888888;
+}
+
+.mb-4-about {
+  text-align: center;
+  max-width: 900px;
+  transform: translate(28%, 7%);
+
+  padding: 60px;
+  margin-bottom: 150px;
+  margin-top: 100px;
+  background-color: #BDEDFF;
+  box-shadow: 5px 10px 18px #888888;
+
+}
+
+.history {
+  padding-left: 35px;
+  padding-top: 25px;
+}
+
+.aboutmain {
+  padding: 50px;
+}
+
+.learngrow {
+  background-image:
+    url("https://s35691.pcdn.co/wp-content/uploads/2021/11/day-picture-id1163588010.jpg");
+
+  background-size: cover;
+  height: 550px;
+
+
+  font-size: 50px;
+  background-repeat: no-repeat;
+}
+
+.homebtn {
+  font-size: 20px;
+  text-align: center;
+  margin-top: -50px;
+  font-family: cursive;
+}
+
+
+
+
+
+
+.teacherdivcl {
+
+  height: 260px;
+  background-color: white;
+  display: inline-block;
+
+
+}
+
+.totalnum {
+  float: left;
+}
+
+.teacherdiv {
+  display: inline-block;
+}
+
+
+
+.float-parent-element {
+  width: 80%;
+  margin-bottom: 20px;
+  margin-top: 0%;
+}
+
+.float-child-element {
+  float: left;
+  width: 40%;
+}
+
+.red {
+  background-color: lightgreen;
+  margin-left: 50%;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  text-align: center;
+  align-items: center;
+  height: 100px;
+}
+
+.yellow {
+  margin-left: 50%;
+  height: 100px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  text-align: center;
+  background-color: lightgreen;
+}
+
+.teachertbl {
+  text-align: center;
+  padding: 20px;
+}
+
+.tblofteacher {
+  margin-left: 14%;
+  margin-top: 10%;
+}
+
+.actions a {
+  text-decoration: none;
+  color: black;
+}
+
+.content {
+  padding: 10px;
+}
+
+.nav {
+  float: left;
+  width: 180px;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0% 0%;
+
+}
+
+.nav ul {
+  list-style-type: none;
+}
+
+.mainstudent {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 20px;
+}
+.mainparent{
+  width: 100%;
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 3%;
+}
+.mainparent h3{
+  background-color: #BDEDFF;
+  padding: 1%;
+  border-radius: 18px;
+  box-shadow: 5px 10px 18px #888888;
+  margin: 2% 1%;
+  margin-top: 140px;
+}
+.mainattendance{
+  width: 100%;
+  text-align: center;
+  margin-bottom: 50px;
+  /* padding: 20px; */
+}
+.mainattendance h3{
+  background-color: #BDEDFF;
+  padding: 1%;
+  border-radius: 18px;
+  box-shadow: 5px 10px 18px #888888;
+  margin: 2% 1%;
+  margin-top: 140px;
+}
+
+
+.mystu {
+  border-radius: 12px;
+  padding: .5%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  /* background-color: #BFE8EF; */
+  background-color: turquoise;
+  box-shadow: 5px 10px 18px #888888;
+  margin-left: 170%;
+  margin: 10% 105%;
+  width: 320px;
+}
+
+.float-child-element {
+  border-radius: 18px;
+}
+
+.red {
+  background-color: lightgreen;
+  margin-left: 50%;
+  margin-top: 40px;
+  padding: 60px;
+  margin-bottom: 30px;
+  text-align: center;
+  align-items: center;
+  height: 160px;
+  border-radius: 18px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 18px;
+  box-shadow: 5px 10px 18px #888888;
+}
+
+.footer {
+  clear: both;
+}
+
+.navteacher {
+  float: left;
+  width: 180px;
+  height: 100px;
+  padding: 20px;
+  font-size: 18px;
+  position: relative;
+}
+
+.navteacher a {
+  padding: 8px;
+  text-decoration: none;
+
+  color: #33383b;
+  font-weight: bolder;
+}
+
+.navteacher ul {
+  list-style-type: none;
+}
+
+.studentrow {
+  text-align: center;
+  padding: 12px;
+}
+
+.allstudent {
+  text-align: center;
+  margin-top: 4px;
+  margin-bottom: 20px;
+  padding: 40px;
+
+}
+
+.stucls h4 {
+  text-align: center;
+  margin: 0% 40%;
+  justify-content: center;
+  align-items: center;
+  margin-left: 60%;
+  padding: 40%;
+  margin-right: 60%;
+  box-shadow: 5px 10px #888888;
+}
+
+.allstudent h4 {
+  /* background-color: aqua; */
+  border-radius: 12px;
+  padding: 1%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  /* background-color: #BFE8EF; */
+  background-color: turquoise;
+  box-shadow: 5px 10px 18px #888888;
+  margin-left: 170%;
+  margin: 10% 170%;
+  width: 180px;
+
+
+
+}
+
+
+.nav ul,
+h4, h3 {
+  font-family: cursive;
+}
+.nav h4{
+  padding: 6%;
+  text-align: center;
+  margin: 7% 11%;
+  background-color:#BDEDFF ;
+  border-radius: 18px;
+  box-shadow: 5px 10px 18px blue;
+
+  
+}
+
+.attendance {
+  background-color: lightgreen;
+  width: 350px;
+  text-align: center;
+  margin-bottom: 50px;
+  transform: translate(86%, 12%);
+  height: 140px;
+  border-radius: 18px;
+  margin: 8% 18%;
+  padding: 60px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  box-shadow: 5px 10px 18px #888888;
+  font-size: 18px;
+  font-weight:bold;
+}
+
+
+.navparent {
+  float: left;
+  width: 180px;
+  font-size: 12px;
+  font-weight: bold;
+
+}
+
+.navparent ul {
+  list-style-type: none;
+}
+
+.home-about {
+  align-content: center;
+  padding: 60px;
+
+
+}
+
+.home-about p {
+  font-family: cursive;
+  font-size: 18px;
+
+}
+
+.admintsp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.admindiv {
+  height: 150px;
+  width: 1000px;
+  background-color: lightgreen;
+  margin: 0% 4%;
+  flex: 3;
+  padding: 60px;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: #BDEDFF;
+  box-shadow: 5px 10px 18px #888888;
+  border-radius: 18px;
+
+}
+
+.admintsp :hover {
+
+  background-color: #CBFFAE;
+  background-color: #8FC273;
+  box-shadow: 5px 10px 18px #888888;
+}
+
+.admindiv a {
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.evecal {
+  display: flex;
+}
+
+.admincaleve {
+  background-color: lightseagreen;
+  flex: 5;
+  margin: 8%;
+  padding: 100px;
+  height: 250px;
+  text-align: center;
+  font-size: 22px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: #B7EB9A;
+  box-shadow: 5px 10px 18px #888888;
+  border-radius: 18px;
+}
+
+.evecal :hover {
+  background-color: #87A3D7;
+}
+
+.admincaleve a {
+  text-decoration: none;
+  color: black;
+}
+
+.noticelbl {
+  text-align: center;
+  background-color: lightseagreen;
+  padding: 1%;
+  font-size: 22px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.noticedetails {
+  text-align: center;
+  padding: 60px;
+}
+
+.callbl {
+  text-align: center;
+  background-color: lightseagreen;
+  padding: 1%;
+  font-size: 22px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.caldetails {
+  text-align: center;
+  padding: 60px;
+}
+
+.caldetails h5 {
+  background-color: lightgreen;
+  border-radius: 15px;
+  width: 500px;
+  margin: 3% 28%;
+  text-align: center;
+  box-shadow: 5px 10px 18px #888888;
+
+  padding: 1%;
+}
+
+.adminbtn {
+  padding: 70px;
+  margin-bottom: 5%;
+
+}
+
+.adminbtn a {
+  text-decoration: none;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  color: black;
+}
+
+.adminbtn button {
+  border-radius: 12px;
+  width: 150px;
+  height: 50px;
+  background-color: #99CD7F;
+  margin: 0;
+  /* Green */
+  box-shadow: 5px 10px 18px purple;
+  border: none;
+}
+
+.teabtn button {
+  float: left;
+
+  border-radius: 12px;
+  width: 150px;
+  height: 50px;
+  background-color: #99CD7F;
+  /* Green */
+  margin-bottom: 60px;
+
+  box-shadow: 5px 10px 18px purple;
+  border: none;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  color: #202529;
+
+
+
+
+}
+
+.teabtn {
+  padding: 70px;
+  margin-bottom: 5%;
+}
+
+.stubtn {
+  padding: 70px;
+  margin-bottom: 5%;
+}
+
+.stubtn button :hover {
+  box-shadow: 5px 10px 18px purple;
+
+}
+
+.stubtn button {
+  float: left;
+
+  border-radius: 12px;
+  width: 150px;
+  height: 50px;
+  background-color: #99CD7F;
+  /* Green */
+  margin-bottom: 60px;
+  box-shadow: 5px 10px 18px purple;
+  border: none;
+
+}
+
+.alldata {
+  background-color: #87A3D7;
+}
+
+.stubtn a {
+  text-decoration: none;
+  color: #202529;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.stubtn button:hover {
+  background-color: light;
+  color: white;
+}
+.addstudent h4{
+
+}
+.addparent{
+text-align: center;
+  background-color: rgb(67, 211, 163);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding: 20px;
+  border-radius: 18px;
+  margin: 2% 1% 0% 1%;
+  box-shadow: 2px 5px 10px 3px red inset;
+}
+
+.addstudent {
+  text-align: center;
+  background-color: rgb(67, 211, 163);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding: 20px;
+  border-radius: 18px;
+  margin: 2% 1%;
+  box-shadow: 2px 5px 10px 3px red inset;
+
+}
+.addbtnadmin td{
+  padding:3%;
+  background-color:#0099ff;
+  border-radius: 8px;
+  
+}
+.addadminbtn{
+  text-align: center;
+  margin: 1% 140%;
+}
+.studentdetails {
+  padding: 50px;
+margin: 4% 35%;
+  background-color: #BDEDFF;
+  box-shadow: 5px 10px 18px #888888;
+
+}
+.studentdetails td{
+  padding: 1%;
+}
+
+.signinas td {
+  padding: 10px;
+}
+
+.signinas td signinasa {
+  padding: 10px;
+}
+
+.homeimgpersonalied {
+  height: 300px;
+  width: 600px;
+}
+
+.homeimghpy {
+  height: 500px;
+  width: 600px;
+}
+
+
+
+.home-col-md-3 {
+  width: 50%;
+  float: left;
+  position: relative;
+  padding: 1%;
+  margin-left: 500px;
+  text-align: center;
+}
+
+.home-col-md-3 h1 {
+  background-color: #0099ff;
+  border-radius: 15px;
+  box-shadow: 10px 10px 8px 10px #888888;
+
+}
+
+.mission {
+  text-align: center;
+}
+
+.homedivtitle h4 {
+  width: 1200px;
+  padding: 10px;
+  background-color: lightgreen;
+  text-align: center;
+  border-radius: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
+  box-shadow: 5px 10px #888888;
+
+
+}
+
+.homedivdet {
+  text-align: center;
+  margin-left: 20%;
+  width: 1000px;
+  padding: 20px;
+}
+
+.heading_main_text_align_left h2 {
+  background-color: lightskyblue;
+  padding: 2%;
+  border-radius: 15px;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 5px 10px 0px red inset;
+
+}
+
+
+
+.navbar-brand {
+  height: 7.5vh;
+  margin: auto 1%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.nav-item {
+  /* font-size: 1.1rem; */
+  /* font-size: 14px; */
+  /* font-size: 15px;  */
+  color: #fff;
+}
+
+.bg-color {
+
+  background-color: #004269;
+}
+
+.bg-color li {
+
+
+  color: white;
+}
+
+.navbar-brand {
+  margin-left: 1%;
+  /* height: 10vh; */
+}
+
+.allstu {
+  background-color: lightskyblue;
+  padding: 2%;
+  border-radius: 15px;
+  box-shadow: 0px 5px 10px 0px red inset;
+}
