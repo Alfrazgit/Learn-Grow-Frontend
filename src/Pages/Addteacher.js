@@ -2,101 +2,79 @@ import React from 'react'
 
 export default function Addteacher() {
     return (
-        <div className='add'>
-            <div className='addstudent'><h4>Add Teacher Data</h4></div>
-            <div className='studentdetails'>
-                <form action="" method="POST" enctype="multipart/form-data">
+        <div>
 
-                    <table class="tbl-30">
-                        <tr>
-                            <td>
-                                Full Name:
-                            </td>
-                            <td><input type="text" name="full_name" placeholder="Enter your name" /></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Username:
-                            </td>
-                            <td><input type="text" name="username" placeholder="Enter username" /></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Password:
-                            </td>
-                            <td><input type="password" name="password" placeholder="Enter your password" /></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Teacher ID:
-                            </td>
-                            <td>
-                                <input type="text" name="title" placeholder="Teacher ID" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Year:</td>
-                            <td>
-                                <input type="number" name="year" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Gender:
-                            </td>
-                            <td>
-                                <input type="radio" name="gender" value="male" />Male
-                                <input type="radio" name="gender" value="female" />Female
-                            </td>
+            <div className='addparent'><h4>Add Teacher Data</h4></div>
 
-                        </tr>
+            <form className="addt">
 
-                        <tr>
-                            <td>
-                                Subject name:
-                            </td>
-                            <td><input type="text" name="subject" placeholder="Enter Subject name" /></td>
-                        </tr>
-                        <tr>
-                            <td>Select Image:</td>
-                            <td>
-                                <input type="file" name="image" />
-                            </td>
+                <div className="form-outline mb-4">
+                    <label className="form-label" for="form2Example2">Full Name</label>
+                    <input type="text" id="form2Example2" className="form-control" name="full_name" placeholder="Enter teacher name" />
 
-                        </tr>
-                        
-                        <tr>
-                            <td>Description:</td>
-                            <td>
-                                <textarea name="description" cols="23" rows="4" placeholder="Description"></textarea>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Address:</td>
-                            <td>
-                                <textarea name="description" cols="23" rows="2" placeholder="Address"></textarea>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Phone No.:</td>
-                            <td>
-                            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"/>                            </td>
-                        </tr>
-                       
+                </div>
+                <div className="form-outline mb-4">
+                    <label className="form-label" for="form2Example2">Username</label>
+                    <input type="text" id="form2Example2" className="form-control" name="username" placeholder="Enter teacher username" />
 
-                        <div className='addadminbtn'>
-                            <tr>
-                                <td colspan="2">
-                                <button type="button" class="btn btn-primary btn-block mb-4">&nbsp;Add&nbsp;</button>
+                </div>
+                
+                <div className="form-outline mb-4">
+                    <label className="form-label" for="form2Example2">Teacher ID</label>
+                    <input type="text" id="form2Example2" className="form-control" name="roll" placeholder="Teacher ID" />
 
-                                    {/* <input className="addbtnadmin" type="submit" name="submit" value="Add Admin" class="btn-secondary" /> */}
-                                </td>
-                            </tr>
-                        </div>
-                    </table>
-                </form>
-            </div>
-        </div>
+                </div>
+                <div className="form-outline mb-4">
+                    <label className="form-label" for="form2Example2">Password</label>
+                    <input type="password" id="form2Example2" className="form-control" />
+
+                </div>
+
+                <div className="form-outline mb-4">
+                    <label className="form-label" for="form2Example2">Age</label>
+                    <input type="number" id="form2Example2" className="form-control" name="year" />
+
+                </div>
+                <div className="form-outline mb-4">
+                    <label className="form-label" for="form2Example2">Gender &nbsp;</label>
+                    <input type="radio" name="gender" value="male" /> &nbsp;Male &nbsp;
+                    <input type="radio" name="gender" value="female" /> &nbsp;Female &nbsp;
+
+                </div>
+
+                <div className="form-outline mb-4">
+                    <label className="form-label" for="form2Example2">Select Teacher Image</label>
+                    <input type="file" id="form2Example2" className="form-control" name="studentimage" />
+
+                </div>
+                <div className="form-outline mb-4">
+                    <label className="form-label" for="form2Example2">Subject Name</label>
+                    <input type="text" id="form2Example2" className="form-control" name="full_name" placeholder="Enter subject name" />
+
+                </div>                <div className="form-outline mb-4">
+                    <label className="form-label" for="form2Example2">Address</label>
+                    <textarea name="description" id="form2Example2" className="form-control" cols="23" rows="2" placeholder="Address"></textarea>
+
+                </div>
+                <div className="form-outline mb-4">
+                    <label className="form-label" for="form2Example2">Phone No.</label>
+                    <input type="tel" id="form2Example2" className="form-control" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" />
+
+
+                </div>
+
+
+
+
+                <button type="button" className="btn btn-primary btn-block mb-4"> Add </button>
+
+
+
+            </form>
+        </div >
+
+
+
 
     )
 }
