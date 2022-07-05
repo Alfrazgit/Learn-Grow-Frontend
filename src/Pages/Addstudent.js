@@ -45,7 +45,7 @@ const AddStudent = () => {
                 placeholder="Id"
                 name="student_id"
                 className="form-control"
-                value={student.student_ID}
+                value={student.student_id}
                 onChange={(e) => handleChange(e)}
                 type="text"
               />
@@ -67,7 +67,7 @@ const AddStudent = () => {
                 placeholder="Class"
                 name="student_class"
                 className="form-control"
-                value={student.class}
+                value={student.student_class}
                 onChange={(e) => handleChange(e)}
                 type="text"
               />
@@ -100,7 +100,7 @@ const AddStudent = () => {
                 placeholder="Parents Id"
                 name="parent_id"
                 className="form-control"
-                value={student.parent_ID}
+                value={student.parent_id}
                 onChange={(e) => handleChange(e)}
                 type="text"
               />

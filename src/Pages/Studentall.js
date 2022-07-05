@@ -93,14 +93,14 @@ const Studentall = () => {
         <tbody>
           {students.map((student) => (
             <tr key={student.student_id}>
-              <td>{student.student_id}</td>
-              <td>{student.name}</td>
-              <td>{student.student_class}</td>
-              <td>{student.section}</td>
-              <td>{student.roll}</td>
-              <td>{student.parent_id}</td>
-              <td>{student.dob}</td>
-              <td className="actions">
+            <td>{student.student_id}</td>
+            <td>{student.name}</td>
+            <td>{student.student_class}</td>
+            <td>{student.section}</td>
+            <td>{student.roll}</td>
+            <td>{student.parent_id}</td>
+            <td>{student.dob}</td>
+            <td className="actions">
                 <button
                   className="btn btn-info"
                   onClick={() => editStudent(student, student.student_id)}
