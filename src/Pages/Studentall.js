@@ -15,7 +15,6 @@ const Studentall = () => {
   };
 
   const deleteStudent = (e, id) => {
-    e.preventDefault();
     StudentService.deleteStudent(id).then((res) => {
       if (students) {
         setStudents((prevElement) => {
@@ -36,7 +35,7 @@ const Studentall = () => {
       <h1>All Students</h1>
       <table className="table table-striped table-centered students-table">
         <thead>
-          <h4>Class-9</h4>
+          <h4>Class-1</h4>
           <tr>
             <th scope="col">ID</th>
             <th scope="col">Name</th>
@@ -49,36 +48,38 @@ const Studentall = () => {
           </tr>
         </thead>
         <tbody>
-          {students.map((student) => (
-            <tr key={student.student_id}>
-              <td>{student.student_id}</td>
-              <td>{student.name}</td>
-              <td>{student.student_class}</td>
-              <td>{student.section}</td>
-              <td>{student.roll}</td>
-              <td>{student.parent_id}</td>
-              <td>{student.dob}</td>
-              <td className="actions">
-                <button
-                  className="btn btn-info"
-                  onClick={(e, id) => editStudent(e, student.student_id)}
-                >
-                  Edit
-                </button>
-                <button
-                  className="btn btn-danger ml-2"
-                  onClick={(e, id) => deleteStudent(e, student.student_id)}
-                >
-                  Delete
-                </button>
-              </td>
-            </tr>
-          ))}
+          {students
+            .filter((student) => student.student_class === 1)
+            .map((student) => (
+              <tr key={student.student_id}>
+                <td>{student.student_id}</td>
+                <td>{student.name}</td>
+                <td>{student.student_class}</td>
+                <td>{student.section}</td>
+                <td>{student.roll}</td>
+                <td>{student.parent_id}</td>
+                <td>{student.dob}</td>
+                <td className="actions">
+                  <button
+                    className="btn btn-info"
+                    onClick={(e, id) => editStudent(e, student.student_id)}
+                  >
+                    Edit
+                  </button>
+                  <button
+                    className="btn btn-danger ml-2"
+                    onClick={(e, id) => deleteStudent(e, student.student_id)}
+                  >
+                    Delete
+                  </button>
+                </td>
+              </tr>
+            ))}
         </tbody>
       </table>
       <table className="table table-striped table-centered students-table">
         <thead>
-          <h4>Class-10</h4>
+          <h4>Class-2</h4>
           <tr>
             <th scope="col">ID</th>
             <th scope="col">Name</th>
@@ -91,33 +92,35 @@ const Studentall = () => {
           </tr>
         </thead>
         <tbody>
-          {students.map((student) => (
-            <tr key={student.student_id}>
-            <td>{student.student_id}</td>
-            <td>{student.name}</td>
-            <td>{student.student_class}</td>
-            <td>{student.section}</td>
-            <td>{student.roll}</td>
-            <td>{student.parent_id}</td>
-            <td>{student.dob}</td>
-            <td className="actions">
-                <button
-                  className="btn btn-info"
-                  onClick={() => editStudent(student, student.student_id)}
-                >
-                  Edit
-                </button>
-                <Link to="/#">
-                  <button className="btn btn-danger">Delete</button>
-                </Link>
-              </td>
-            </tr>
-          ))}
+          {students
+            .filter((student) => student.student_class === 2)
+            .map((student) => (
+              <tr key={student.student_id}>
+                <td>{student.student_id}</td>
+                <td>{student.name}</td>
+                <td>{student.student_class}</td>
+                <td>{student.section}</td>
+                <td>{student.roll}</td>
+                <td>{student.parent_id}</td>
+                <td>{student.dob}</td>
+                <td className="actions">
+                  <button
+                    className="btn btn-info"
+                    onClick={() => editStudent(student, student.student_id)}
+                  >
+                    Edit
+                  </button>
+                  <Link to="/#">
+                    <button className="btn btn-danger">Delete</button>
+                  </Link>
+                </td>
+              </tr>
+            ))}
         </tbody>
       </table>
       <table className="table table-striped table-centered students-table">
         <thead>
-          <h4>Class-11</h4>
+          <h4>Class-3</h4>
           <tr>
             <th scope="col">ID</th>
             <th scope="col">Name</th>
@@ -130,33 +133,35 @@ const Studentall = () => {
           </tr>
         </thead>
         <tbody>
-          {students.map((student) => (
-            <tr key={student.student_id}>
-              <td>{student.student_id}</td>
-              <td>{student.name}</td>
-              <td>{student.student_class}</td>
-              <td>{student.section}</td>
-              <td>{student.roll}</td>
-              <td>{student.parent_id}</td>
-              <td>{student.dob}</td>
-              <td className="actions">
-                <button
-                  className="btn btn-info"
-                  onClick={() => editStudent(student, student.student_id)}
-                >
-                  Edit
-                </button>
-                <Link to="/#">
-                  <button className="btn btn-danger">Delete</button>
-                </Link>
-              </td>
-            </tr>
-          ))}
+          {students
+            .filter((student) => student.student_class === 3)
+            .map((student) => (
+              <tr key={student.student_id}>
+                <td>{student.student_id}</td>
+                <td>{student.name}</td>
+                <td>{student.student_class}</td>
+                <td>{student.section}</td>
+                <td>{student.roll}</td>
+                <td>{student.parent_id}</td>
+                <td>{student.dob}</td>
+                <td className="actions">
+                  <button
+                    className="btn btn-info"
+                    onClick={() => editStudent(student, student.student_id)}
+                  >
+                    Edit
+                  </button>
+                  <Link to="/#">
+                    <button className="btn btn-danger">Delete</button>
+                  </Link>
+                </td>
+              </tr>
+            ))}
         </tbody>
       </table>
       <table className="table table-striped table-centered students-table">
         <thead>
-          <h4>Class-12</h4>
+          <h4>Class-4</h4>
           <tr>
             <th scope="col">ID</th>
             <th scope="col">Name</th>
@@ -169,28 +174,30 @@ const Studentall = () => {
           </tr>
         </thead>
         <tbody>
-          {students.map((student) => (
-            <tr key={student.student_id}>
-              <td>{student.student_id}</td>
-              <td>{student.name}</td>
-              <td>{student.student_class}</td>
-              <td>{student.section}</td>
-              <td>{student.roll}</td>
-              <td>{student.parent_id}</td>
-              <td>{student.dob}</td>
-              <td className="actions">
-                <button
-                  className="btn btn-info"
-                  onClick={() => editStudent(student, student.student_id)}
-                >
-                  Edit
-                </button>
-                <Link to="/#">
-                  <button className="btn btn-danger">Delete</button>
-                </Link>
-              </td>
-            </tr>
-          ))}
+          {students
+            .filter((student) => student.student_class === 4)
+            .map((student) => (
+              <tr key={student.student_id}>
+                <td>{student.student_id}</td>
+                <td>{student.name}</td>
+                <td>{student.student_class}</td>
+                <td>{student.section}</td>
+                <td>{student.roll}</td>
+                <td>{student.parent_id}</td>
+                <td>{student.dob}</td>
+                <td className="actions">
+                  <button
+                    className="btn btn-info"
+                    onClick={() => editStudent(student, student.student_id)}
+                  >
+                    Edit
+                  </button>
+                  <Link to="/#">
+                    <button className="btn btn-danger">Delete</button>
+                  </Link>
+                </td>
+              </tr>
+            ))}
         </tbody>
       </table>
       <div className="">

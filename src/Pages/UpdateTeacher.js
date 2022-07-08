@@ -1,39 +1,50 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import TeacherService from "../services/TeacherService";
 
-const Addteacher = () => {
+const UpdateTeacher = (props) => {
+  const { id } = useParams();
   const navigate = useNavigate();
+
   const [teacher, setTeacher] = useState({
-    id: "",
+    id: id,
     name: "",
     subject: "",
     password: "",
   });
+
+  useEffect(() => {
+    TeacherService.getTeacherById(teacher.id).then((res) => {
+      let tea = res.data;
+      console.log(tea);
+      setTeacher({
+        id: tea.id,
+        name: tea.name,
+        subject: tea.subject,
+        password: tea.password,
+      });
+    });
+  }, []);
 
   const handleChange = (e) => {
     const value = e.target.value;
     setTeacher({ ...teacher, [e.target.name]: value });
   };
 
-  const saveTeacher = (e) => {
+  const editTeacher = (e) => {
     e.preventDefault();
-
-    TeacherService.addTeacher(teacher)
-      .then((res) => {
-        console.log(res);
-        navigate("/teacherall");
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    console.log(teacher);
+    TeacherService.editTeacher(teacher, teacher.id).then((res) => {
+      navigate("/teacherall");
+    });
   };
 
   return (
     <div>
       <div className="addparent">
-        <h4>Add Teacher Data</h4>
+        <h4>Update Teacher Data</h4>
       </div>
 
       <form className="addt">
@@ -43,9 +54,9 @@ const Addteacher = () => {
           </label>
           <input
             type="text"
-            id="form2Example2"
             className="form-control"
             name="name"
+            value={teacher.name}
             placeholder="Enter teacher name"
             onChange={(e) => handleChange(e)}
           />
@@ -54,30 +65,24 @@ const Addteacher = () => {
           <label className="form-label" for="form2Example2">
             Subject
           </label>
-          <select
-            class="form-control"
+          <input
+            type="text"
+            className="form-control"
             name="subject"
+            value={teacher.subject}
             placeholder="Enter subject"
             onChange={(e) => handleChange(e)}
-          >
-            <option value="Math">Math</option>
-            <option value="Language">Language</option>
-
-            <option value="English">English</option>
-            <option value="Physical">Physical</option>
-            <option value="No Subject">No Subject</option>
-          </select>
+          />
         </div>
-
         <div className="form-outline mb-4">
           <label className="form-label" for="form2Example2">
             Teacher ID
           </label>
           <input
             type="text"
-            id="form2Example2"
             className="form-control"
             name="id"
+            value={teacher.id}
             placeholder="Teacher ID"
             onChange={(e) => handleChange(e)}
           />
@@ -87,15 +92,14 @@ const Addteacher = () => {
             Password
           </label>
           <input
-            type="text"
-            id="form2Example2"
+            type="password"
             className="form-control"
             name="password"
+            value={teacher.password}
             placeholder="Password"
             onChange={(e) => handleChange(e)}
           />
         </div>
-
         {/* <div className="form-outline mb-4">
                     <label className="form-label" for="form2Example2">Age</label>
                     <input type="number" id="form2Example2" className="form-control" name="year" />
@@ -107,7 +111,6 @@ const Addteacher = () => {
                     <input type="radio" name="gender" value="female" /> &nbsp;Female &nbsp;
 
                 </div> */}
-
         {/* <div className="form-outline mb-4">
                     <label className="form-label" for="form2Example2">Select Teacher Image</label>
                     <input type="file" id="form2Example2" className="form-control" name="studentimage" />
@@ -128,20 +131,15 @@ const Addteacher = () => {
 
 
                 </div> */}
-
-        <button
-          className="btn btn-primary btn-block my-3 mx-2"
-          onClick={saveTeacher}
-        >
-          {" "}
-          Add{" "}
+        <button className="btn btn-success my-3" onClick={editTeacher}>
+          Save
         </button>
         <Link to="/teacherall">
           <button className="btn btn-danger my-3 mx-2">Cancel</button>
-        </Link>
+        </Link>{" "}
       </form>
     </div>
   );
 };
 
-export default Addteacher;
+export default UpdateTeacher;
