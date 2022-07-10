@@ -15,10 +15,11 @@ const Parentall = () => {
   const editParent = (e, id) => {
     e.preventDefault();
     console.log(id);
-    navigate(`./../updateteacher/${id}`);
+    navigate(`./../updateparent/${id}`);
   };
 
-  const deleteParent = (e, id) => {
+  const deleteParent = (e, parent) => {
+    const id = parent.id;
     ParentService.deleteParent(id).then((res) => {
       if (parents) {
         setParents((prevElement) => {
@@ -67,7 +68,7 @@ const Parentall = () => {
                       </button>
                       <button
                         class="btn btn-danger"
-                        onClick={(e, id) => deleteParent(e, id)}
+                        onClick={(e, id) => deleteParent(e, parent)}
                       >
                         Delete
                       </button>
