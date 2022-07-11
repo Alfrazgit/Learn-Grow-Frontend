@@ -22,6 +22,8 @@ import Addadmin from "./Pages/Addadmin";
 import Admission from "./Pages/Admission";
 import UpdateStudent from "./Pages/UpdateStudent";
 import Viewallstudent from "./Pages/Viewallstudent";
+import UpdateTeacher from "./Pages/UpdateTeacher";
+import UpdateParent from "./Pages/UpdateParent";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -54,8 +56,9 @@ function App() {
         <Route path="/addteacher" element={<Addteacher />} />
         <Route path="/admission" element={<Admission />} />
         <Route path="/viewallstudent" element={<Viewallstudent />} />
-
+        <Route path="/updateteacher/:id" element={<UpdateTeacher />} />
         <Route path="/editstudent/:id" element={<UpdateStudent />} />
+        <Route path="/updateparent/:id" element={<UpdateParent />} />
       </Routes>
 
       <Footer />

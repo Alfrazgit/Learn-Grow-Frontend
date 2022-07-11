@@ -4,7 +4,7 @@ import StudentService from "../services/StudentService";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
-const UpdateStudent = (props) => {
+const UpdateStudent = () => {
   const { id } = useParams();
   const navigate = useNavigate();
 
@@ -29,21 +29,12 @@ const UpdateStudent = (props) => {
     StudentService.editStudent(student, student.student_id).then((res) => {
       navigate("/studentall");
     });
-    // StudentService.editStudent(student, id)
-    //   .then((res) => {
-    //     console.log(res);
-    //     navigate("/studentall");
-    //   })
-    //   .catch((error) => {
-    //     console.log(error);
-    //   });
   };
 
   useEffect(() => {
     StudentService.getStudentById(student.student_id).then((res) => {
       let stu = res.data;
       console.log(stu);
-      console.log(props);
       setStudent({
         student_id: stu.student_id,
         name: stu.name,

@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import ParentService from "../services/ParentService";
 
-export default function Addparent() {
+export default function UpdateParent() {
+  const { id } = useParams();
   const navigate = useNavigate();
   const [parent, setParent] = useState({
+    id: id,
     name: "",
     phno: "",
     password: "",
@@ -19,21 +21,30 @@ export default function Addparent() {
 
   const saveParent = (e) => {
     e.preventDefault();
-
-    ParentService.addParent(parent)
-      .then((res) => {
-        console.log(res);
-        navigate("/parentall");
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    console.log(parent);
+    ParentService.editParent(parent, parent.id).then((res) => {
+      navigate("/parentall");
+    });
   };
+
+  React.useEffect(() => {
+    ParentService.getParentById(parent.id).then((res) => {
+      let parent = res.data;
+      console.log(parent);
+      setParent({
+        id: parent.id,
+        name: parent.name,
+        phno: parent.phno,
+        password: parent.password,
+        stu_id: parent.stu_id,
+      });
+    });
+  }, []);
 
   return (
     <div>
       <div className="addparent">
-        <h4>Add Parent Data</h4>
+        <h4>Update Parent Data</h4>
       </div>
 
       <form className="add">
@@ -43,6 +54,7 @@ export default function Addparent() {
             type="text"
             class="form-control"
             name="name"
+            value={parent.name}
             placeholder="Enter Parent name"
             onChange={(e) => handleChange(e)}
           />
@@ -59,6 +71,7 @@ export default function Addparent() {
             type="text"
             class="form-control"
             name="stu_id"
+            value={parent.stu_id}
             placeholder="Enter student id"
             onChange={(e) => handleChange(e)}
           />
@@ -69,6 +82,7 @@ export default function Addparent() {
             type="text"
             class="form-control"
             name="password"
+            value={parent.password}
             placeholder="Password"
             onChange={(e) => handleChange(e)}
           />
@@ -79,6 +93,7 @@ export default function Addparent() {
             type="tel"
             class="form-control"
             name="phno"
+            value={parent.phno}
             pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
             placeholder="Enter Phone Number"
             onChange={(e) => handleChange(e)}
@@ -162,7 +177,7 @@ export default function Addparent() {
           onClick={saveParent}
         >
           {" "}
-          Add{" "}
+          Update{" "}
         </button>
         <Link to="/parentall">
           <button className="btn btn-danger btn-block mb-4 mx-1">Cancel</button>
